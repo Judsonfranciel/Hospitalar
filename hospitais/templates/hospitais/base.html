@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/estilo.css">
+	<link rel="icon" type="/static/img/png" href="/static/img/logotipo.png" class="logotipo">
+	<title>Hospitalar</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-light"><!-- Iniciar menu-->
+		<div class="container">
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+				<ul class="navbar-nav ml-auto mr-auto">
+					<li ><a href="#" class="nav-link">Home</a></li>
+					<li><a href="#" class="nav-link">Hospitais</a></li>
+					<li ><a href="#" class="nav-link">Tipos de Hospitais</a></li>
+					<li class="dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gerenciar Hospitais</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#" class="dropdown-item">Inserir Hospitais</a>
+							</li>
+							<li class="dropdown-divider"></li>
+							<li>
+								<a href="" class="dropdown-item">Editar Hospitais</a>
+							</li>
+							<li class="dropdown-divider"></li>
+							<li>
+								<a href="" class="dropdown-item">Exluir Hospitais</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mr-auto"><a href="#" class="nav-link">Registro</a></li>
+					<li class="mr-auto"><a href="#" class="nav-link">Login</a></li>
+				</ul>
+			</div><!--Fim collapse-->
+			
+		</div><!--Fim container-->
+	</nav><!--fim menu-->
+	<main>
+		<section class="jumbotron"><!--inicio titulo-->
+
+			<form class="input-group">
+				<input class="form-control" type="search" placeholder="Busque aqui!">
+				<button class="btn btn-primary ml-1">Pesquisar</button>
+			</form>
+		</section><!-- Fim título-->
+		<section>
+			<form method="POST" enctype="multipart/form-data">
+			{% block content %}
+
+
+			{% endblock content %}
+			<input type="submit" value="Enviar">
+		
+		</form>
+
+		</section>
+
+</main>
+
+	<script  src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+</html>
